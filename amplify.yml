@@ -5,9 +5,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - nvm install 18
-            - nvm use 18
-            - node -v
+            - echo "Using Node version: $NODE_VERSION"
             - npm ci
         build:
           commands:
@@ -19,3 +17,4 @@ applications:
       cache:
         paths:
           - node_modules/**/*
+`
